@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DNW-AI — AI-Powered Supply Chain & SAP Solutions</title>
+  <meta name="description" content="DNW-AI delivers AI-enabled supply chain, SAP consulting, cloud analytics, and cyber security solutions for modern enterprises." />
+  <link rel="stylesheet" href="assets/style.css" />
+  <style>
+    /* ---- reveal animation ---- */
+    .reveal { opacity:0; transform:translateY(28px); transition:0.6s ease; }
+    .reveal.visible { opacity:1; transform:none; }
+
+    /* ---- features strip ---- */
+    .features-strip { background:var(--secondary); padding:28px 0; }
+    .features-list { display:flex; gap:36px; flex-wrap:wrap; justify-content:center; }
+    .features-list li { color:var(--white); font-size:0.9rem; font-weight:500; display:flex; align-items:center; gap:8px; }
+    .features-list li::before { content:'✓'; background:rgba(255,255,255,0.2); border-radius:50%; width:20px; height:20px; display:flex; align-items:center; justify-content:center; font-size:0.7rem; flex-shrink:0; }
+
+    /* ---- products ---- */
+    .product-card { background:var(--white); border-radius:12px; box-shadow:var(--shadow); overflow:hidden; transition:var(--transition); }
+    .product-card:hover { transform:translateY(-6px); box-shadow:0 16px 40px rgba(0,0,0,0.14); }
+    .product-banner { height:160px; display:flex; align-items:center; justify-content:center; font-size:3rem; }
+    .banner-blue   { background:linear-gradient(135deg,#0a1f44,#1a6cf0); }
+    .banner-green  { background:linear-gradient(135deg,#064e3b,#10b981); }
+    .banner-orange { background:linear-gradient(135deg,#78350f,#f59e0b); }
+    .product-body  { padding:28px; }
+    .product-body h3 { color:var(--primary); margin-bottom:10px; font-size:1.1rem; }
+    .product-body p  { color:var(--muted); font-size:0.93rem; margin-bottom:18px; }
+
+    /* ---- sap services ---- */
+    .sap-item { display:flex; align-items:flex-start; gap:14px; padding:20px; background:var(--white); border-radius:var(--radius); box-shadow:var(--shadow); }
+    .sap-num { min-width:40px; height:40px; background:var(--secondary); color:var(--white); border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:0.9rem; }
+    .sap-item h4 { color:var(--primary); margin-bottom:4px; }
+    .sap-item p  { color:var(--muted); font-size:0.88rem; }
+
+    /* ---- testimonial ---- */
+    .testimonial-card { background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.12); border-radius:12px; padding:36px; }
+    .testimonial-card blockquote { font-size:1.05rem; line-height:1.8; color:rgba(255,255,255,0.85); margin-bottom:24px; }
+    .testimonial-card blockquote::before { content:'\201C'; font-size:3rem; color:var(--accent); line-height:0; vertical-align:-0.5em; margin-right:4px; }
+    .testimonial-meta { display:flex; align-items:center; gap:14px; }
+    .testimonial-avatar { width:48px; height:48px; border-radius:50%; background:var(--secondary); display:flex; align-items:center; justify-content:center; font-weight:700; color:var(--white); font-size:1.1rem; }
+    .testimonial-meta h5 { color:var(--white); margin-bottom:2px; }
+    .testimonial-meta span { font-size:0.82rem; color:rgba(255,255,255,0.55); }
+
+    /* ---- CTA banner ---- */
+    .cta-banner { background:linear-gradient(135deg,var(--secondary),#0a3d8f); padding:70px 0; text-align:center; color:var(--white); }
+    .cta-banner h2 { font-size:2rem; margin-bottom:14px; }
+    .cta-banner p  { color:rgba(255,255,255,0.8); margin-bottom:30px; font-size:1.05rem; }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════ HEADER ═══════════ -->
+<header>
+  <div class="container nav-inner">
+    <a href="index.html" class="logo">
+      <div class="logo-icon">D</div>
+      DNW<span>-AI</span>
+    </a>
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+    <nav>
+      <ul id="nav-menu">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="services.html">Our Services</a></li>
+        <li><a href="tools.html">Tools &amp; Tips</a></li>
+        <li><a href="industries.html">Industries</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li class="nav-cta"><a href="contact.html">Book Online</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- ═══════════ HERO ═══════════ -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-tag">AI-Powered Supply Chain Intelligence</div>
+      <h1>Welcome to the World of <em>Supply Chain Solutions</em></h1>
+      <p>DNEXTWELT's next-generation AI platform — delivering smarter logistics, real-time visibility, and intelligent operations for forward-thinking enterprises.</p>
+      <div class="hero-actions">
+        <a href="services.html" class="btn btn-primary">Explore Services</a>
+        <a href="contact.html" class="btn btn-outline">Book a Consultation</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><strong>200+</strong><span>SAP Implementations</span></div>
+        <div class="stat"><strong>15+</strong><span>Years of Expertise</span></div>
+        <div class="stat"><strong>50+</strong><span>Enterprise Clients</span></div>
+        <div class="stat"><strong>98%</strong><span>Client Satisfaction</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ FEATURE STRIP ═══════════ -->
+<div class="features-strip">
+  <div class="container">
+    <ul class="features-list">
+      <li>SAP TM / EWM / LGM</li>
+      <li>Cloud &amp; Analytics</li>
+      <li>AI Route Optimization</li>
+      <li>Cyber &amp; Security</li>
+      <li>Managed Services</li>
+      <li>24 / 7 Support</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ═══════════ CORE SERVICES ═══════════ -->
+<section class="section">
+  <div class="container">
+    <div class="accent-bar"></div>
+    <h2 class="section-title reveal">Our Core Services</h2>
+    <p class="section-subtitle reveal">End-to-end technology and consulting expertise aligned to your business objectives.</p>
+    <div class="grid-4">
+      <div class="card reveal">
+        <div class="card-icon">🧠</div>
+        <h3>IT Strategy &amp; Infrastructure</h3>
+        <p>Aligning technology with business objectives through strategic planning and robust infrastructure design.</p>
+        <a href="services.html#it-strategy" class="tag" style="margin-top:14px;">Learn more →</a>
+      </div>
+      <div class="card reveal">
+        <div class="card-icon">☁️</div>
+        <h3>Cloud &amp; Analytics</h3>
+        <p>Converting raw data into actionable business intelligence with cloud-native architecture and advanced analytics.</p>
+        <a href="services.html#cloud" class="tag" style="margin-top:14px;">Learn more →</a>
+      </div>
+      <div class="card reveal">
+        <div class="card-icon">🔐</div>
+        <h3>Cyber &amp; Security</h3>
+        <p>Comprehensive threat protection, compliance management, and security posture hardening for enterprise systems.</p>
+        <a href="services.html#cyber" class="tag" style="margin-top:14px;">Learn more →</a>
+      </div>
+      <div class="card reveal">
+        <div class="card-icon">⚙️</div>
+        <h3>Support &amp; Managed Services</h3>
+        <p>Ongoing system maintenance, monitoring, and operational continuity so your business never misses a beat.</p>
+        <a href="services.html#managed" class="tag" style="margin-top:14px;">Learn more →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ PRODUCT INNOVATIONS ═══════════ -->
+<section class="section section-light">
+  <div class="container">
+    <div class="accent-bar"></div>
+    <h2 class="section-title reveal">Key Product Innovations</h2>
+    <p class="section-subtitle reveal">AI-driven platforms built to solve real-world logistics and mobility challenges.</p>
+    <div class="grid-3">
+      <div class="product-card reveal">
+        <div class="product-banner banner-blue">🛣️</div>
+        <div class="product-body">
+          <span class="tag">AI Logistics</span>
+          <h3>Safe2Go</h3>
+          <p>AI-enabled logistics platform providing route optimization, real-time tracking, and predictive analytics for safer, more efficient transportation and journey planning.</p>
+          <a href="tools.html#safe2go" class="btn btn-primary" style="font-size:0.85rem;padding:9px 20px;">Explore Safe2Go</a>
+        </div>
+      </div>
+      <div class="product-card reveal">
+        <div class="product-banner banner-green">📦</div>
+        <div class="product-body">
+          <span class="tag">Smart Packing</span>
+          <h3>Optimized Packing Solution</h3>
+          <p>Intelligent system maximizing space utilization, balancing weight distribution, and reducing operational costs across household moves and warehouse transfers.</p>
+          <a href="tools.html#packing" class="btn btn-primary" style="font-size:0.85rem;padding:9px 20px;">Explore Solution</a>
+        </div>
+      </div>
+      <div class="product-card reveal">
+        <div class="product-banner banner-orange">🚗</div>
+        <div class="product-body">
+          <span class="tag">Smart Parking</span>
+          <h3>Park As You Desire</h3>
+          <p>Flexible parking service allowing users to reserve preferred spots with monitored security and convenient app-based access — park exactly where you want.</p>
+          <a href="tools.html#parking" class="btn btn-primary" style="font-size:0.85rem;padding:9px 20px;">Explore Parking</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ SAP EXPERTISE ═══════════ -->
+<section class="section">
+  <div class="container">
+    <div class="accent-bar"></div>
+    <h2 class="section-title reveal">SAP Consulting Expertise</h2>
+    <p class="section-subtitle reveal">We are a team of competent and accomplished SAP Consultants specializing in TM, EWM, and LGM.</p>
+    <div class="grid-2">
+      <div class="sap-item reveal"><div class="sap-num">01</div><div><h4>SAP Implementation</h4><p>Full-lifecycle SAP deployments tailored to your industry requirements and business processes.</p></div></div>
+      <div class="sap-item reveal"><div class="sap-num">02</div><div><h4>Customized Solutions</h4><p>Bespoke SAP configurations and custom development to address unique operational challenges.</p></div></div>
+      <div class="sap-item reveal"><div class="sap-num">03</div><div><h4>Optimized Logistics</h4><p>SAP TM &amp; EWM optimization for improved throughput, reduced cost, and end-to-end visibility.</p></div></div>
+      <div class="sap-item reveal"><div class="sap-num">04</div><div><h4>Support &amp; Maintenance</h4><p>Proactive application management keeping your SAP landscape stable and up-to-date.</p></div></div>
+      <div class="sap-item reveal"><div class="sap-num">05</div><div><h4>Upgrade &amp; Migration</h4><p>Smooth transitions to SAP S/4HANA with minimal disruption to your business operations.</p></div></div>
+      <div class="sap-item reveal"><div class="sap-num">06</div><div><h4>Training &amp; Workshops</h4><p>Hands-on SAP training programmes designed to upskill your team and maximise system ROI.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ TESTIMONIAL ═══════════ -->
+<section class="section section-dark">
+  <div class="container">
+    <div class="accent-bar"></div>
+    <h2 class="section-title reveal">What Our Clients Say</h2>
+    <p class="section-subtitle reveal">Trusted by leading enterprises across Europe and beyond.</p>
+    <div class="grid-2">
+      <div class="testimonial-card reveal">
+        <blockquote>DNEXTWELT has been instrumental in revolutionizing our logistics operations. Their expertise in SAP platforms and deep understanding of supply chain dynamics delivered results beyond our expectations.</blockquote>
+        <div class="testimonial-meta">
+          <div class="testimonial-avatar">M</div>
+          <div><h5>Marcus Hoffmann</h5><span>Head of Logistics, European Manufacturing Co.</span></div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal">
+        <blockquote>The Safe2Go platform transformed how we manage transportation routing. Real-time visibility and AI-powered predictions have cut our delivery delays by over 35% in just six months.</blockquote>
+        <div class="testimonial-meta">
+          <div class="testimonial-avatar">S</div>
+          <div><h5>Sophie Laurent</h5><span>Operations Director, French Retail Group</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ CTA ═══════════ -->
+<div class="cta-banner">
+  <div class="container">
+    <h2 class="reveal">Ready to Optimize Your Supply Chain?</h2>
+    <p class="reveal">Reach out to DNW-AI for any queries about our services and products.</p>
+    <a href="contact.html" class="btn btn-accent reveal">Book a Free Consultation</a>
+  </div>
+</div>
+
+<!-- ═══════════ FOOTER ═══════════ -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo">
+          <div class="logo-icon">D</div>
+          DNW<span style="color:var(--accent)">-AI</span>
+        </div>
+        <p>AI-powered supply chain, SAP consulting, and digital transformation solutions for forward-thinking enterprises across Europe and beyond.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Our Services</a></li>
+          <li><a href="industries.html">Industries</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services.html#it-strategy">IT Strategy</a></li>
+          <li><a href="services.html#cloud">Cloud &amp; Analytics</a></li>
+          <li><a href="services.html#cyber">Cyber Security</a></li>
+          <li><a href="services.html#managed">Managed Services</a></li>
+          <li><a href="tools.html">Tools &amp; Products</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact footer-col">
+        <h4>Contact Us</h4>
+        <p><span>📍</span> Regenbogen-11, 68305 Mannheim, Germany</p>
+        <p><span>📞</span> +49 1746381559</p>
+        <p><span>✉️</span> info@dnw-ai.com</p>
+        <div class="social-links" style="margin-top:16px;">
+          <a href="#" title="LinkedIn">in</a>
+          <a href="#" title="Twitter">𝕏</a>
+          <a href="#" title="Facebook">f</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 DNW-AI. All rights reserved.</span>
+      <span>A DNEXTWELT Initiative</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/main.js"></script>
+</body>
+</html>

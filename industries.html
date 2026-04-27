@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Industries — DNW-AI</title>
+  <meta name="description" content="DNW-AI serves logistics, manufacturing, retail, automotive, healthcare, and more." />
+  <link rel="stylesheet" href="assets/style.css" />
+  <style>
+    .reveal { opacity:0; transform:translateY(28px); transition:0.6s ease; }
+    .reveal.visible { opacity:1; transform:none; }
+
+    .industry-card { border-radius:12px; overflow:hidden; box-shadow:var(--shadow); transition:var(--transition); }
+    .industry-card:hover { transform:translateY(-6px); box-shadow:0 16px 40px rgba(0,0,0,0.14); }
+    .industry-banner { height:140px; display:flex; align-items:center; justify-content:center; font-size:3.5rem; }
+    .industry-body { padding:24px; background:var(--white); }
+    .industry-body h3 { color:var(--primary); margin-bottom:8px; }
+    .industry-body p  { color:var(--muted); font-size:0.9rem; }
+    .industry-body ul { margin-top:14px; }
+    .industry-body ul li { font-size:0.85rem; color:var(--text); padding:4px 0; display:flex; gap:8px; }
+    .industry-body ul li::before { content:'›'; color:var(--secondary); font-weight:700; }
+
+    .b1 { background:linear-gradient(135deg,#0a1f44,#1a6cf0); }
+    .b2 { background:linear-gradient(135deg,#064e3b,#10b981); }
+    .b3 { background:linear-gradient(135deg,#4c1d95,#7c3aed); }
+    .b4 { background:linear-gradient(135deg,#78350f,#f59e0b); }
+    .b5 { background:linear-gradient(135deg,#7c2d12,#ef4444); }
+    .b6 { background:linear-gradient(135deg,#1e3a5f,#0ea5e9); }
+
+    .stat-row { display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:24px; }
+    .stat-box { background:var(--white); border-radius:var(--radius); box-shadow:var(--shadow); padding:28px; text-align:center; }
+    .stat-box strong { display:block; font-size:2.2rem; font-weight:800; color:var(--secondary); }
+    .stat-box span   { font-size:0.88rem; color:var(--muted); }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container nav-inner">
+    <a href="index.html" class="logo"><div class="logo-icon">D</div>DNW<span>-AI</span></a>
+    <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+    <nav>
+      <ul id="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Our Services</a></li>
+        <li><a href="tools.html">Tools &amp; Tips</a></li>
+        <li><a href="industries.html" class="active">Industries</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li class="nav-cta"><a href="contact.html">Book Online</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Home</a> / Industries</div>
+    <h1>Industries We Serve</h1>
+    <p>Deep domain expertise across the sectors that drive global commerce and logistics.</p>
+  </div>
+</div>
+
+<!-- ═══ INDUSTRY CARDS ═══ -->
+<section class="section">
+  <div class="container">
+    <div class="accent-bar"></div>
+    <h2 class="section-title reveal">Sector Expertise</h2>
+    <p class="section-subtitle reveal">We bring specialised knowledge to every engagement, understanding your industry's unique challenges and regulatory requirements.</p>
+    <div class="grid-3">
+
+      <div class="industry-card reveal">
+        <div class="industry-banner b1">🚚</div>
+        <div class="industry-body">
+          <h3>Logistics &amp; Transportation</h3>
+          <p>End-to-end optimisation across freight, last-mile delivery, and multimodal transport networks.</p>
+          <ul>
+            <li>SAP TM implementation &amp; optimisation</li>
+            <li>AI-powered route planning (Safe2Go)</li>
+            <li>Real-time shipment visibility</li>
+            <li>Carrier management &amp; freight audit</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="industry-card reveal">
+        <div class="industry-banner b2">🏭</div>
+        <div class="industry-body">
+          <h3>Manufacturing</h3>
+          <p>Smart factory enablement, production planning, and supply chain integration for industrial enterprises.</p>
+          <ul>
+            <li>SAP EWM warehouse management</li>
+            <li>MES &amp; ERP integration</li>
+            <li>Predictive maintenance analytics</li>
+            <li>Bill of materials optimisation</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="industry-card reveal">
+        <div class="industry-banner b3">🛍️</div>
+        <div class="industry-body">
+          <h3>Retail &amp; E-Commerce</h3>
+          <p>Omnichannel supply chain solutions that meet today's consumer demand for speed and transparency.</p>
+          <ul>
+            <li>Demand forecasting &amp; replenishment</li>
+            <li>Omnichannel fulfilment automation</li>
+            <li>Returns &amp; reverse logistics</li>
+            <li>Inventory visibility across channels</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="industry-card reveal">
+        <div class="industry-banner b4">🚘</div>
+        <div class="industry-body">
+          <h3>Automotive</h3>
+          <p>Lean supply chain management and just-in-time delivery optimisation for automotive OEMs and suppliers.</p>
+          <ul>
+            <li>JIT &amp; JIS delivery management</li>
+            <li>Supplier collaboration portals</li>
+            <li>Sequencing &amp; kitting solutions</li>
+            <li>Quality &amp; compliance tracking</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="industry-card reveal">
+        <div class="industry-banner b5">🏥</div>
+        <div class="industry-body">
+          <h3>Healthcare &amp; Pharma</h3>
+          <p>Cold-chain integrity, regulatory compliance, and serialisation for healthcare supply chains.</p>
+          <ul>
+            <li>Cold-chain monitoring &amp; alerting</li>
+            <li>Serialisation &amp; track-and-trace</li>
+            <li>GxP-compliant system design</li>
+            <li>Demand planning for medical supplies</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="industry-card reveal">
+        <div class="industry-banner b6">🏗️</div>
+        <div class="industry-body">
+          <h3>Construction &amp; Real Estate</h3>
+          <p>Streamlined procurement, site logistics, and asset management for large-scale construction projects.</p>
+          <ul>
+            <li>Project procurement management</li>
+            <li>Site material tracking</li>
+            <li>Subcontractor coordination tools</li>
+            <li>Smart parking (Park As You Desire)</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ STATS ═══ -->
+<section class="section section-light">
+  <div class="container">
+    <div class="accent-bar"></div>
+    <h2 class="section-title reveal">Our Reach by the Numbers</h2>
+    <p class="section-subtitle reveal">Trusted across sectors and geographies.</p>
+    <div class="stat-row">
+      <div class="stat-box reveal"><strong>6+</strong><span>Industries Served</span></div>
+      <div class="stat-box reveal"><strong>12</strong><span>Countries</span></div>
+      <div class="stat-box reveal"><strong>50+</strong><span>Enterprise Clients</span></div>
+      <div class="stat-box reveal"><strong>200+</strong><span>SAP Projects</span></div>
+      <div class="stat-box reveal"><strong>15+</strong><span>Years Experience</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CTA ═══ -->
+<section class="section section-dark" style="text-align:center;">
+  <div class="container">
+    <h2 class="reveal" style="margin-bottom:16px;">Don't See Your Industry?</h2>
+    <p class="reveal" style="color:rgba(255,255,255,0.75);margin-bottom:28px;max-width:520px;margin-left:auto;margin-right:auto;">Our consulting expertise is broad and adaptable. Get in touch and let's discuss how DNW-AI can serve your specific sector needs.</p>
+    <a href="contact.html" class="btn btn-accent reveal">Talk to an Expert</a>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><div class="logo"><div class="logo-icon">D</div>DNW<span style="color:var(--accent)">-AI</span></div><p>AI-powered supply chain, SAP consulting, and digital transformation solutions for forward-thinking enterprises.</p></div>
+      <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="services.html">Our Services</a></li><li><a href="industries.html">Industries</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div class="footer-col"><h4>Industries</h4><ul><li><a href="#">Logistics</a></li><li><a href="#">Manufacturing</a></li><li><a href="#">Retail</a></li><li><a href="#">Automotive</a></li><li><a href="#">Healthcare</a></li></ul></div>
+      <div class="footer-contact footer-col"><h4>Contact Us</h4><p><span>📍</span> Regenbogen-11, 68305 Mannheim, Germany</p><p><span>📞</span> +49 1746381559</p><p><span>✉️</span> info@dnw-ai.com</p><div class="social-links" style="margin-top:16px;"><a href="#">in</a><a href="#">𝕏</a><a href="#">f</a></div></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 DNW-AI. All rights reserved.</span><span>A DNEXTWELT Initiative</span></div>
+  </div>
+</footer>
+
+<script src="assets/main.js"></script>
+</body>
+</html>

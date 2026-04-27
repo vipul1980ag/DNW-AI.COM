@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tools &amp; Tips — DNW-AI</title>
+  <meta name="description" content="Explore DNW-AI's innovative AI-powered products: Safe2Go, Optimized Packing, and Park As You Desire." />
+  <link rel="stylesheet" href="assets/style.css" />
+  <style>
+    .reveal { opacity:0; transform:translateY(28px); transition:0.6s ease; }
+    .reveal.visible { opacity:1; transform:none; }
+
+    .product-section { padding:80px 0; border-bottom:1px solid #eee; }
+    .product-section:last-of-type { border-bottom:none; }
+    .product-grid { display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center; }
+    .product-grid.reverse { }
+    .product-visual { border-radius:16px; height:320px; display:flex; align-items:center; justify-content:center; font-size:6rem; position:relative; overflow:hidden; }
+    .product-visual::after { content:''; position:absolute; inset:0; background:rgba(0,0,0,0.12); }
+    .vis-blue   { background:linear-gradient(135deg,#0a1f44,#1a6cf0); }
+    .vis-green  { background:linear-gradient(135deg,#064e3b,#10b981); }
+    .vis-orange { background:linear-gradient(135deg,#78350f,#f59e0b); }
+    .product-content h2 { font-size:1.9rem; color:var(--primary); margin:14px 0 16px; }
+    .product-content p  { color:var(--muted); line-height:1.85; margin-bottom:18px; }
+    .feature-pills { display:flex; flex-wrap:wrap; gap:10px; margin-bottom:24px; }
+    .pill { background:var(--light); color:var(--primary); font-size:0.82rem; font-weight:600; padding:5px 14px; border-radius:50px; border:1px solid #dde3ef; }
+
+    /* tips */
+    .tip-card { background:var(--white); border-radius:var(--radius); box-shadow:var(--shadow); padding:28px; border-top:4px solid var(--secondary); }
+    .tip-card h4 { color:var(--primary); margin-bottom:8px; }
+    .tip-card p  { color:var(--muted); font-size:0.9rem; }
+
+    @media(max-width:768px){ .product-grid { grid-template-columns:1fr; gap:32px; } .product-visual { height:200px; } }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container nav-inner">
+    <a href="index.html" class="logo"><div class="logo-icon">D</div>DNW<span>-AI</span></a>
+    <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+    <nav>
+      <ul id="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Our Services</a></li>
+        <li><a href="tools.html" class="active">Tools &amp; Tips</a></li>
+        <li><a href="industries.html">Industries</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li class="nav-cta"><a href="contact.html">Book Online</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Home</a> / Tools &amp; Tips</div>
+    <h1>Tools &amp; Tips</h1>
+    <p>Our AI-powered product suite built to tackle real-world logistics, mobility, and operations challenges.</p>
+  </div>
+</div>
+
+<!-- ═══ SAFE2GO ═══ -->
+<section class="product-section" id="safe2go">
+  <div class="container">
+    <div class="product-grid">
+      <div class="product-visual vis-blue reveal">🛣️</div>
+      <div class="product-content reveal">
+        <span class="tag">AI Logistics Platform</span>
+        <h2>Safe2Go</h2>
+        <p>Safe2Go is an AI-enabled logistics platform providing intelligent route optimization, real-time fleet tracking, and predictive analytics — delivering safer, faster, and more cost-effective transportation.</p>
+        <p>Whether you are managing last-mile delivery, long-haul freight, or complex multi-modal journeys, Safe2Go puts actionable intelligence at the heart of your operations.</p>
+        <div class="feature-pills">
+          <span class="pill">AI Route Optimization</span>
+          <span class="pill">Real-Time Tracking</span>
+          <span class="pill">Predictive Analytics</span>
+          <span class="pill">Driver Safety Scoring</span>
+          <span class="pill">Multi-Modal Support</span>
+          <span class="pill">ETA Accuracy Engine</span>
+        </div>
+        <a href="contact.html" class="btn btn-primary">Request a Demo</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PACKING ═══ -->
+<section class="product-section section-light" id="packing">
+  <div class="container">
+    <div class="product-grid">
+      <div class="product-content reveal">
+        <span class="tag">Smart Packing &amp; Moving</span>
+        <h2>Optimized Packing &amp; Moving Solution</h2>
+        <p>Our intelligent packing system maximizes space utilization, balances weight distribution, and significantly reduces operational costs — applicable to household moves, commercial relocations, and warehouse transfers alike.</p>
+        <p>The algorithm calculates optimal load configurations in seconds, reducing the number of trips required and protecting fragile items through smart stacking guidance.</p>
+        <div class="feature-pills">
+          <span class="pill">3D Load Optimization</span>
+          <span class="pill">Weight Balancing</span>
+          <span class="pill">Fragile Item Protection</span>
+          <span class="pill">Cost Reduction</span>
+          <span class="pill">Household Moves</span>
+          <span class="pill">Warehouse Transfers</span>
+        </div>
+        <a href="contact.html" class="btn btn-primary">Get in Touch</a>
+      </div>
+      <div class="product-visual vis-green reveal">📦</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PARKING ═══ -->
+<section class="product-section" id="parking">
+  <div class="container">
+    <div class="product-grid">
+      <div class="product-visual vis-orange reveal">🚗</div>
+      <div class="product-content reveal">
+        <span class="tag">Smart Parking</span>
+        <h2>Park As You Desire</h2>
+        <p>A flexible, app-driven parking service allowing users to reserve their preferred parking spots in advance — with monitored security, real-time availability data, and convenient payment options.</p>
+        <p>Park exactly where you want, when you want — eliminating the frustration of circling for spaces and providing guaranteed access to secure, monitored facilities.</p>
+        <div class="feature-pills">
+          <span class="pill">Spot Reservation</span>
+          <span class="pill">Real-Time Availability</span>
+          <span class="pill">Monitored Security</span>
+          <span class="pill">App-Based Access</span>
+          <span class="pill">Flexible Billing</span>
+          <span class="pill">Multi-City Support</span>
+        </div>
+        <a href="contact.html" class="btn btn-primary">Learn More</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ TIPS ═══ -->
+<section class="section section-light">
+  <div class="container">
+    <div class="accent-bar"></div>
+    <h2 class="section-title reveal">Supply Chain Tips &amp; Insights</h2>
+    <p class="section-subtitle reveal">Practical guidance from our consultants to help you stay ahead of the curve.</p>
+    <div class="grid-3">
+      <div class="tip-card reveal">
+        <h4>📊 Leverage Predictive Analytics</h4>
+        <p>Use demand forecasting models to reduce safety stock by up to 30% while maintaining service levels. Start with your top 20% SKUs by revenue.</p>
+      </div>
+      <div class="tip-card reveal">
+        <h4>🔗 Integrate Your Data Sources</h4>
+        <p>Siloed ERP, WMS, and TMS data is the biggest barrier to supply chain visibility. A unified data layer unlocks real-time decision-making.</p>
+      </div>
+      <div class="tip-card reveal">
+        <h4>🚀 Automate Repetitive Tasks</h4>
+        <p>RPA and AI can handle routine order processing, invoice matching, and exception alerts — freeing your team for higher-value analysis.</p>
+      </div>
+      <div class="tip-card reveal">
+        <h4>🌱 Build Resilience Into Your Network</h4>
+        <p>Dual-sourcing critical components and mapping sub-tier suppliers helps identify vulnerabilities before they become disruptions.</p>
+      </div>
+      <div class="tip-card reveal">
+        <h4>📱 Empower Mobile Workforces</h4>
+        <p>Mobile-first warehouse and field operations apps reduce errors and accelerate task completion — SAP Fiori and custom apps are your friends.</p>
+      </div>
+      <div class="tip-card reveal">
+        <h4>♻️ Optimise Returns &amp; Reverse Logistics</h4>
+        <p>A streamlined reverse logistics process can recover 3–5% of revenue and significantly improve customer satisfaction scores.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><div class="logo"><div class="logo-icon">D</div>DNW<span style="color:var(--accent)">-AI</span></div><p>AI-powered supply chain, SAP consulting, and digital transformation solutions for forward-thinking enterprises.</p></div>
+      <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="services.html">Our Services</a></li><li><a href="industries.html">Industries</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div class="footer-col"><h4>Products</h4><ul><li><a href="#safe2go">Safe2Go</a></li><li><a href="#packing">Packing Solution</a></li><li><a href="#parking">Park As You Desire</a></li></ul></div>
+      <div class="footer-contact footer-col"><h4>Contact Us</h4><p><span>📍</span> Regenbogen-11, 68305 Mannheim, Germany</p><p><span>📞</span> +49 1746381559</p><p><span>✉️</span> info@dnw-ai.com</p><div class="social-links" style="margin-top:16px;"><a href="#">in</a><a href="#">𝕏</a><a href="#">f</a></div></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 DNW-AI. All rights reserved.</span><span>A DNEXTWELT Initiative</span></div>
+  </div>
+</footer>
+
+<script src="assets/main.js"></script>
+</body>
+</html>

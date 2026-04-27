@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog — DNW-AI</title>
+  <meta name="description" content="Latest insights on SAP, supply chain, AI, and digital transformation from the DNW-AI team." />
+  <link rel="stylesheet" href="assets/style.css" />
+  <style>
+    .reveal { opacity:0; transform:translateY(28px); transition:0.6s ease; }
+    .reveal.visible { opacity:1; transform:none; }
+
+    /* blog cards */
+    .blog-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:32px; }
+    .blog-card { background:var(--white); border-radius:12px; box-shadow:var(--shadow); overflow:hidden; transition:var(--transition); display:flex; flex-direction:column; }
+    .blog-card:hover { transform:translateY(-6px); box-shadow:0 16px 40px rgba(0,0,0,0.14); }
+    .blog-thumb { height:180px; display:flex; align-items:center; justify-content:center; font-size:3.5rem; }
+    .th-1 { background:linear-gradient(135deg,#0a1f44,#1a6cf0); }
+    .th-2 { background:linear-gradient(135deg,#064e3b,#10b981); }
+    .th-3 { background:linear-gradient(135deg,#4c1d95,#7c3aed); }
+    .th-4 { background:linear-gradient(135deg,#78350f,#f59e0b); }
+    .th-5 { background:linear-gradient(135deg,#7c2d12,#ef4444); }
+    .th-6 { background:linear-gradient(135deg,#1e3a5f,#0ea5e9); }
+    .blog-body { padding:24px; flex:1; display:flex; flex-direction:column; }
+    .blog-meta { display:flex; gap:14px; font-size:0.78rem; color:var(--muted); margin-bottom:10px; }
+    .blog-meta .cat { color:var(--secondary); font-weight:600; }
+    .blog-body h3 { color:var(--primary); font-size:1.05rem; margin-bottom:10px; line-height:1.5; }
+    .blog-body p  { color:var(--muted); font-size:0.88rem; line-height:1.7; flex:1; }
+    .read-more { display:inline-block; margin-top:16px; color:var(--secondary); font-size:0.88rem; font-weight:600; }
+    .read-more:hover { text-decoration:underline; }
+
+    /* featured */
+    .featured-post { display:grid; grid-template-columns:1.2fr 1fr; gap:0; border-radius:12px; overflow:hidden; box-shadow:var(--shadow); margin-bottom:48px; }
+    .featured-visual { background:linear-gradient(135deg,var(--primary),#1a6cf0); display:flex; align-items:center; justify-content:center; font-size:5rem; min-height:280px; }
+    .featured-body { background:var(--white); padding:40px; display:flex; flex-direction:column; justify-content:center; }
+    .featured-body h2 { color:var(--primary); font-size:1.5rem; margin-bottom:12px; line-height:1.4; }
+    .featured-body p  { color:var(--muted); line-height:1.8; margin-bottom:20px; }
+    .featured-badge { background:var(--accent); color:var(--primary); font-size:0.78rem; font-weight:700; padding:4px 12px; border-radius:50px; display:inline-block; margin-bottom:14px; }
+
+    /* newsletter */
+    .newsletter { background:linear-gradient(135deg,var(--secondary),#0a3d8f); border-radius:12px; padding:48px; text-align:center; color:var(--white); }
+    .newsletter h3 { font-size:1.5rem; margin-bottom:12px; }
+    .newsletter p  { color:rgba(255,255,255,0.8); margin-bottom:24px; }
+    .newsletter-form { display:flex; gap:12px; justify-content:center; flex-wrap:wrap; }
+    .newsletter-form input { padding:12px 20px; border:none; border-radius:var(--radius); width:280px; font-size:0.95rem; outline:none; }
+    .newsletter-form button { padding:12px 28px; background:var(--accent); color:var(--primary); font-weight:700; border:none; border-radius:var(--radius); cursor:pointer; font-size:0.95rem; transition:var(--transition); }
+    .newsletter-form button:hover { background:#d4920a; }
+
+    @media(max-width:768px){ .featured-post { grid-template-columns:1fr; } .featured-visual { min-height:180px; } }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container nav-inner">
+    <a href="index.html" class="logo"><div class="logo-icon">D</div>DNW<span>-AI</span></a>
+    <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+    <nav>
+      <ul id="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Our Services</a></li>
+        <li><a href="tools.html">Tools &amp; Tips</a></li>
+        <li><a href="industries.html">Industries</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="blog.html" class="active">Blog</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li class="nav-cta"><a href="contact.html">Book Online</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Home</a> / Blog</div>
+    <h1>Insights &amp; Articles</h1>
+    <p>Expert perspectives on supply chain, SAP, AI, and the future of enterprise logistics.</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+
+    <!-- FEATURED -->
+    <div class="featured-post reveal">
+      <div class="featured-visual">🤖</div>
+      <div class="featured-body">
+        <span class="featured-badge">Featured</span>
+        <div class="blog-meta"><span class="cat">AI &amp; Innovation</span><span>April 2026</span><span>8 min read</span></div>
+        <h2>How AI Is Redefining Route Optimization in Modern Logistics</h2>
+        <p>Traditional routing algorithms can no longer keep pace with the complexity of today's supply chains. We explore how machine learning models — like those powering Safe2Go — are delivering 20-35% improvements in fuel efficiency and delivery accuracy.</p>
+        <a href="#" class="btn btn-primary" style="font-size:0.88rem;padding:10px 22px;">Read Article</a>
+      </div>
+    </div>
+
+    <!-- BLOG GRID -->
+    <div class="blog-grid">
+
+      <div class="blog-card reveal">
+        <div class="blog-thumb th-2">📦</div>
+        <div class="blog-body">
+          <div class="blog-meta"><span class="cat">SAP EWM</span><span>Mar 2026</span></div>
+          <h3>5 SAP EWM Features You're Probably Not Using (But Should Be)</h3>
+          <p>From multi-step picking strategies to labour management, we uncover the underutilised EWM capabilities that can transform your warehouse operations.</p>
+          <a href="#" class="read-more">Read more →</a>
+        </div>
+      </div>
+
+      <div class="blog-card reveal">
+        <div class="blog-thumb th-3">🔐</div>
+        <div class="blog-body">
+          <div class="blog-meta"><span class="cat">Cyber Security</span><span>Mar 2026</span></div>
+          <h3>The Growing Threat Landscape for SAP Systems in 2026</h3>
+          <p>SAP environments are increasingly targeted by sophisticated threat actors. Here's what CISOs need to know — and the steps to close the most critical gaps.</p>
+          <a href="#" class="read-more">Read more →</a>
+        </div>
+      </div>
+
+      <div class="blog-card reveal">
+        <div class="blog-thumb th-4">☁️</div>
+        <div class="blog-body">
+          <div class="blog-meta"><span class="cat">Cloud Migration</span><span>Feb 2026</span></div>
+          <h3>RISE with SAP: A Pragmatic Guide for Mid-Market Companies</h3>
+          <p>RISE with SAP promises a simplified path to S/4HANA in the cloud. We cut through the marketing to give you a realistic picture of what to expect — costs, timelines, and pitfalls.</p>
+          <a href="#" class="read-more">Read more →</a>
+        </div>
+      </div>
+
+      <div class="blog-card reveal">
+        <div class="blog-thumb th-5">🚗</div>
+        <div class="blog-body">
+          <div class="blog-meta"><span class="cat">Mobility</span><span>Feb 2026</span></div>
+          <h3>Smart Parking: The Overlooked Piece of the Urban Mobility Puzzle</h3>
+          <p>As cities grapple with congestion and emissions, intelligent parking management is emerging as a surprisingly high-impact intervention. Here's the data.</p>
+          <a href="#" class="read-more">Read more →</a>
+        </div>
+      </div>
+
+      <div class="blog-card reveal">
+        <div class="blog-thumb th-6">📊</div>
+        <div class="blog-body">
+          <div class="blog-meta"><span class="cat">Analytics</span><span>Jan 2026</span></div>
+          <h3>Building a Supply Chain Control Tower: Where to Start</h3>
+          <p>A control tower promises end-to-end visibility, but most implementations stall at the data integration stage. We share our proven approach to getting it right from day one.</p>
+          <a href="#" class="read-more">Read more →</a>
+        </div>
+      </div>
+
+      <div class="blog-card reveal">
+        <div class="blog-thumb th-1">🌱</div>
+        <div class="blog-body">
+          <div class="blog-meta"><span class="cat">Sustainability</span><span>Jan 2026</span></div>
+          <h3>Green Logistics: How SAP TM Can Help You Hit Your Carbon Targets</h3>
+          <p>European regulation is tightening fast. SAP Transportation Management has powerful tools for carbon tracking and carrier emission reporting that many companies leave unconfigured.</p>
+          <a href="#" class="read-more">Read more →</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ NEWSLETTER ═══ -->
+<section class="section section-light">
+  <div class="container">
+    <div class="newsletter reveal">
+      <h3>Stay Ahead of the Curve</h3>
+      <p>Get the latest supply chain and SAP insights delivered to your inbox — no spam, just value.</p>
+      <div class="newsletter-form">
+        <input type="email" placeholder="Your email address" />
+        <button type="button">Subscribe</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><div class="logo"><div class="logo-icon">D</div>DNW<span style="color:var(--accent)">-AI</span></div><p>AI-powered supply chain, SAP consulting, and digital transformation solutions for forward-thinking enterprises.</p></div>
+      <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="services.html">Our Services</a></li><li><a href="industries.html">Industries</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div class="footer-col"><h4>Topics</h4><ul><li><a href="#">SAP &amp; EWM</a></li><li><a href="#">AI &amp; Innovation</a></li><li><a href="#">Cloud Migration</a></li><li><a href="#">Cyber Security</a></li><li><a href="#">Sustainability</a></li></ul></div>
+      <div class="footer-contact footer-col"><h4>Contact Us</h4><p><span>📍</span> Regenbogen-11, 68305 Mannheim, Germany</p><p><span>📞</span> +49 1746381559</p><p><span>✉️</span> info@dnw-ai.com</p><div class="social-links" style="margin-top:16px;"><a href="#">in</a><a href="#">𝕏</a><a href="#">f</a></div></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 DNW-AI. All rights reserved.</span><span>A DNEXTWELT Initiative</span></div>
+  </div>
+</footer>
+
+<script src="assets/main.js"></script>
+</body>
+</html>

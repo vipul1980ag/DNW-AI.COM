@@ -1,0 +1,12 @@
+{
+  "name": "dnw-ai",
+  "version": "1.0.0",
+  "description": "DNW-AI website — AI-powered supply chain solutions",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

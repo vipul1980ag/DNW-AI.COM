@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us — DNW-AI</title>
+  <meta name="description" content="Get in touch with the DNW-AI team for SAP consulting, AI platform demos, or to book a consultation." />
+  <link rel="stylesheet" href="assets/style.css" />
+  <style>
+    .reveal { opacity:0; transform:translateY(28px); transition:0.6s ease; }
+    .reveal.visible { opacity:1; transform:none; }
+
+    /* contact layout */
+    .contact-grid { display:grid; grid-template-columns:1fr 1.4fr; gap:60px; align-items:start; }
+
+    /* info sidebar */
+    .info-item { display:flex; gap:16px; align-items:flex-start; margin-bottom:28px; }
+    .info-icon { width:48px; height:48px; background:var(--light); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:1.3rem; flex-shrink:0; }
+    .info-item h4 { color:var(--primary); margin-bottom:4px; font-size:0.95rem; }
+    .info-item p  { color:var(--muted); font-size:0.9rem; line-height:1.6; }
+
+    /* form */
+    .contact-form { background:var(--white); border-radius:12px; box-shadow:var(--shadow); padding:40px; }
+    .contact-form h3 { color:var(--primary); font-size:1.3rem; margin-bottom:6px; }
+    .contact-form .sub { color:var(--muted); font-size:0.9rem; margin-bottom:28px; }
+    .form-row { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+    .form-group { margin-bottom:20px; }
+    .form-group label { display:block; font-size:0.85rem; font-weight:600; color:var(--primary); margin-bottom:6px; }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width:100%;
+      padding:11px 16px;
+      border:1.5px solid #dde3ef;
+      border-radius:var(--radius);
+      font-size:0.92rem;
+      color:var(--text);
+      background:var(--white);
+      transition:var(--transition);
+      font-family:inherit;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus { border-color:var(--secondary); outline:none; box-shadow:0 0 0 3px rgba(26,108,240,0.1); }
+    .form-group textarea { resize:vertical; min-height:130px; }
+    .form-submit { width:100%; padding:14px; font-size:1rem; }
+
+    /* map placeholder */
+    .map-placeholder { background:linear-gradient(135deg,var(--primary),#162d5a); border-radius:12px; height:280px; display:flex; flex-direction:column; align-items:center; justify-content:center; color:var(--white); gap:12px; margin-top:32px; }
+    .map-placeholder .map-icon { font-size:3rem; }
+    .map-placeholder p { font-size:0.9rem; color:rgba(255,255,255,0.75); }
+
+    /* offices */
+    .office-card { background:var(--white); border-radius:var(--radius); box-shadow:var(--shadow); padding:28px; text-align:center; }
+    .office-card .flag { font-size:2.5rem; margin-bottom:12px; }
+    .office-card h4 { color:var(--primary); margin-bottom:8px; }
+    .office-card p { color:var(--muted); font-size:0.88rem; line-height:1.7; }
+
+    @media(max-width:768px){ .contact-grid { grid-template-columns:1fr; gap:32px; } .form-row { grid-template-columns:1fr; } }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container nav-inner">
+    <a href="index.html" class="logo"><div class="logo-icon">D</div>DNW<span>-AI</span></a>
+    <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+    <nav>
+      <ul id="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Our Services</a></li>
+        <li><a href="tools.html">Tools &amp; Tips</a></li>
+        <li><a href="industries.html">Industries</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html" class="active">Contact Us</a></li>
+        <li class="nav-cta"><a href="contact.html">Book Online</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Home</a> / Contact Us</div>
+    <h1>Contact Us</h1>
+    <p>Reach out to DNW-AI for any queries about our services, products, or to schedule a consultation.</p>
+  </div>
+</div>
+
+<!-- ═══ MAIN CONTACT SECTION ═══ -->
+<section class="section">
+  <div class="container">
+    <div class="contact-grid">
+
+      <!-- SIDEBAR INFO -->
+      <div class="reveal">
+        <div class="accent-bar"></div>
+        <h2 style="font-size:1.6rem;color:var(--primary);margin-bottom:8px;">Get In Touch</h2>
+        <p style="color:var(--muted);margin-bottom:32px;font-size:0.95rem;">We're always happy to discuss your supply chain challenges and how our AI-powered solutions can help.</p>
+
+        <div class="info-item">
+          <div class="info-icon">📍</div>
+          <div><h4>Head Office</h4><p>Regenbogen-11<br>68305 Mannheim, Germany</p></div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon">📞</div>
+          <div><h4>Phone</h4><p>+49 1746 381 559</p></div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon">✉️</div>
+          <div><h4>General Enquiries</h4><p>info@dnw-ai.com</p></div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon">💼</div>
+          <div><h4>Business &amp; Partnerships</h4><p>poonam.singhal@dnextwelt.com</p></div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon">🕐</div>
+          <div><h4>Business Hours</h4><p>Monday – Friday: 8:00 AM – 6:00 PM CET<br>Support: 24/7 for managed services clients</p></div>
+        </div>
+
+        <div class="map-placeholder">
+          <div class="map-icon">🗺️</div>
+          <strong>Mannheim, Germany</strong>
+          <p>Regenbogen-11, 68305</p>
+        </div>
+      </div>
+
+      <!-- FORM -->
+      <div class="reveal">
+        <form class="contact-form" id="contact-form">
+          <h3>Send Us a Message</h3>
+          <p class="sub">Fill in the form and one of our experts will be in touch within one business day.</p>
+          <div class="form-row">
+            <div class="form-group"><label>First Name *</label><input type="text" placeholder="John" required /></div>
+            <div class="form-group"><label>Last Name *</label><input type="text" placeholder="Doe" required /></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label>Email Address *</label><input type="email" placeholder="john@company.com" required /></div>
+            <div class="form-group"><label>Phone Number</label><input type="tel" placeholder="+49 123 456 789" /></div>
+          </div>
+          <div class="form-group"><label>Company</label><input type="text" placeholder="Your Company Name" /></div>
+          <div class="form-group">
+            <label>Service of Interest</label>
+            <select>
+              <option value="">Select a service…</option>
+              <option>IT Strategy Consulting</option>
+              <option>Cloud &amp; Analytics</option>
+              <option>Cyber &amp; Security</option>
+              <option>SAP Implementation</option>
+              <option>SAP Support &amp; Maintenance</option>
+              <option>Safe2Go Platform</option>
+              <option>Optimized Packing Solution</option>
+              <option>Park As You Desire</option>
+              <option>Training &amp; Workshops</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group"><label>Message *</label><textarea placeholder="Tell us about your project or challenge…" required></textarea></div>
+          <button type="submit" class="btn btn-primary form-submit">Send Message</button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ OFFICES ═══ -->
+<section class="section section-light">
+  <div class="container">
+    <div class="accent-bar"></div>
+    <h2 class="section-title reveal">Our Presence</h2>
+    <p class="section-subtitle reveal">Serving clients across Europe and beyond with local expertise.</p>
+    <div class="grid-3">
+      <div class="office-card reveal"><div class="flag">🇩🇪</div><h4>Germany (HQ)</h4><p>Regenbogen-11<br>68305 Mannheim<br>+49 1746 381 559</p></div>
+      <div class="office-card reveal"><div class="flag">🇬🇧</div><h4>United Kingdom</h4><p>London, England<br>UK Partners Office<br>By appointment</p></div>
+      <div class="office-card reveal"><div class="flag">🇮🇳</div><h4>India (Development)</h4><p>Bengaluru, Karnataka<br>Technology &amp; Development Hub<br>Remote Delivery</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FAQ ═══ -->
+<section class="section">
+  <div class="container" style="max-width:760px;">
+    <div class="accent-bar"></div>
+    <h2 class="section-title reveal">Frequently Asked Questions</h2>
+    <div style="margin-top:32px;">
+      <details style="margin-bottom:16px;background:var(--light);border-radius:var(--radius);padding:20px;" class="reveal">
+        <summary style="cursor:pointer;font-weight:600;color:var(--primary);">How quickly can you start an engagement?</summary>
+        <p style="margin-top:12px;color:var(--muted);">For most projects, we can have a dedicated team mobilised within 2–3 weeks of contract signing. Managed services onboarding can begin within 5 business days.</p>
+      </details>
+      <details style="margin-bottom:16px;background:var(--light);border-radius:var(--radius);padding:20px;" class="reveal">
+        <summary style="cursor:pointer;font-weight:600;color:var(--primary);">Do you offer fixed-price project delivery?</summary>
+        <p style="margin-top:12px;color:var(--muted);">Yes. For clearly scoped implementations we offer fixed-price contracts with defined milestones and deliverables. Time-and-materials arrangements are also available for more exploratory or agile engagements.</p>
+      </details>
+      <details style="margin-bottom:16px;background:var(--light);border-radius:var(--radius);padding:20px;" class="reveal">
+        <summary style="cursor:pointer;font-weight:600;color:var(--primary);">Can you work with our existing SAP landscape?</summary>
+        <p style="margin-top:12px;color:var(--muted);">Absolutely. We perform a thorough landscape assessment before every engagement and are experienced working across SAP ECC, S/4HANA, TM, EWM, and surrounding systems.</p>
+      </details>
+      <details style="background:var(--light);border-radius:var(--radius);padding:20px;" class="reveal">
+        <summary style="cursor:pointer;font-weight:600;color:var(--primary);">Do you offer a free initial consultation?</summary>
+        <p style="margin-top:12px;color:var(--muted);">Yes — we offer a complimentary 60-minute discovery call with one of our senior consultants. Use the form above or book directly via the "Book Online" button.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><div class="logo"><div class="logo-icon">D</div>DNW<span style="color:var(--accent)">-AI</span></div><p>AI-powered supply chain, SAP consulting, and digital transformation solutions for forward-thinking enterprises.</p></div>
+      <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="services.html">Our Services</a></li><li><a href="industries.html">Industries</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div class="footer-col"><h4>Services</h4><ul><li><a href="services.html#it-strategy">IT Strategy</a></li><li><a href="services.html#cloud">Cloud &amp; Analytics</a></li><li><a href="services.html#cyber">Cyber Security</a></li><li><a href="services.html#managed">Managed Services</a></li></ul></div>
+      <div class="footer-contact footer-col"><h4>Contact Us</h4><p><span>📍</span> Regenbogen-11, 68305 Mannheim, Germany</p><p><span>📞</span> +49 1746381559</p><p><span>✉️</span> info@dnw-ai.com</p><div class="social-links" style="margin-top:16px;"><a href="#">in</a><a href="#">𝕏</a><a href="#">f</a></div></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 DNW-AI. All rights reserved.</span><span>A DNEXTWELT Initiative</span></div>
+  </div>
+</footer>
+
+<script src="assets/main.js"></script>
+</body>
+</html>
