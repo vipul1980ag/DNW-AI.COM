@@ -44,10 +44,10 @@ body {
   opacity: 0;
   animation: bgSlide 24s infinite ease-in-out;
 }
-.bg-slide:nth-child(1) { background-image: url('assets/images/Shiva.jpg');              animation-delay: 0s;  }
-.bg-slide:nth-child(2) { background-image: url('assets/images/Shiva-Tandav.jpeg');      animation-delay: 6s;  }
-.bg-slide:nth-child(3) { background-image: url('assets/images/Shiva-Trishul.jpg');      animation-delay: 12s; }
-.bg-slide:nth-child(4) { background-image: url('assets/images/Lord-Shiva-Tandav.jpeg'); animation-delay: 18s; }
+.bg-slide:nth-child(1) { background-image: url('images/Shiva.jpg');              animation-delay: 0s;  }
+.bg-slide:nth-child(2) { background-image: url('images/Shiva-Tandav.jpeg');      animation-delay: 6s;  }
+.bg-slide:nth-child(3) { background-image: url('images/Shiva-Trishul.jpg');      animation-delay: 12s; }
+.bg-slide:nth-child(4) { background-image: url('images/Lord-Shiva-Tandav.jpeg'); animation-delay: 18s; }
 @keyframes bgSlide {
   0%   { opacity: 0;   transform: scale(1.00); }
   6%   { opacity: 1;                           }
