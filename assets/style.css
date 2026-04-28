@@ -140,41 +140,54 @@ header {
 }
 .logo span { color: var(--accent); }
 .logo-icon {
-  width: 38px; height: 38px;
-  border-radius: 8px;
-  perspective: 400px;
+  width: 50px; height: 50px;
   flex-shrink: 0;
+  filter: drop-shadow(0 0 8px rgba(26,108,240,0.6));
 }
-.logo-flipper {
-  width: 100%; height: 100%;
-  position: relative;
-  transform-style: preserve-3d;
-  transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-  border-radius: 8px;
-  animation: logoColorCycle 6s infinite linear;
+.logo-globe-svg { width:100%; height:100%; }
+
+/* Globe background colour cycle */
+.globe-bg {
+  animation: globeBgColor 8s infinite linear;
 }
-.logo-flipper.flipped { transform: rotateY(180deg); }
-.logo-face {
-  position: absolute;
-  inset: 0;
-  border-radius: 8px;
-  display: flex; align-items: center; justify-content: center;
-  backface-visibility: hidden;
-  color: #fff;
-  font-weight: 800;
-  line-height: 1.2;
-  text-align: center;
+/* DNEXTWELT ring — rotate 360° */
+.globe-ring-group {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: ringRotate 12s infinite linear;
 }
-.logo-face-front { font-size: 0.9rem; }
-.logo-face-back  { font-size: 6px; letter-spacing: 0.04em; transform: rotateY(180deg); }
-@keyframes logoColorCycle {
-  0%   { background: #1a6cf0; }
-  16%  { background: #7c3aed; }
-  32%  { background: #059669; }
-  48%  { background: #f59e0b; }
-  64%  { background: #ef4444; }
-  80%  { background: #ec4899; }
-  100% { background: #1a6cf0; }
+/* Ring text colour cycle */
+.globe-ring-text {
+  animation: ringColor 6s infinite linear;
+}
+/* DNW centre text colour pulse */
+.globe-dnw {
+  animation: dnwColor 4s infinite alternate;
+}
+
+@keyframes globeBgColor {
+  0%   { fill: rgba(26,108,240,0.78); }
+  20%  { fill: rgba(124,58,237,0.78); }
+  40%  { fill: rgba(5,150,105,0.78); }
+  60%  { fill: rgba(217,119,6,0.78);  }
+  80%  { fill: rgba(239,68,68,0.78);  }
+  100% { fill: rgba(26,108,240,0.78); }
+}
+@keyframes ringRotate {
+  from { transform: rotate(0deg);   }
+  to   { transform: rotate(360deg); }
+}
+@keyframes ringColor {
+  0%   { fill: #ffe066; }
+  25%  { fill: #80ffea; }
+  50%  { fill: #ff80b3; }
+  75%  { fill: #b3ff66; }
+  100% { fill: #ffe066; }
+}
+@keyframes dnwColor {
+  0%   { fill: #ffffff; }
+  50%  { fill: #ffe066; }
+  100% { fill: #80ffea; }
 }
 nav ul {
   display: flex;
