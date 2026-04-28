@@ -78,10 +78,8 @@ header,
   z-index: 2;
 }
 
-/* Semi-transparent section backgrounds so Shiva shows through */
-.section          { background: rgba(255,255,255,0.86); }
-.section-light    { background: rgba(244,247,251,0.86); }
-.section-dark     { background: rgba(10,31,68,0.88);   }
+/* Base section gets subtle transparency */
+.section { background: rgba(255,255,255,0.86); }
 
 /* Hero sections — Shiva most visible here */
 .hero {
@@ -105,8 +103,8 @@ ul { list-style: none; }
 /* ---- UTILITY ---- */
 .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
 .section    { padding: 80px 0; }
-.section-light { background: var(--light); }
-.section-dark  { background: var(--primary); color: var(--white); }
+.section-light { background: rgba(244,247,251,0.86); }
+.section-dark  { background: rgba(10,31,68,0.88); color: var(--white); }
 .section-title {
   font-size: 2rem;
   font-weight: 700;
@@ -291,7 +289,7 @@ nav ul li a.active {
 
 /* ---- HERO ---- */
 .hero {
-  background: linear-gradient(135deg, var(--primary) 0%, #162d5a 60%, #1a6cf0 100%);
+  background: linear-gradient(135deg, rgba(10,31,68,0.78) 0%, rgba(22,45,90,0.72) 60%, rgba(26,108,240,0.65) 100%);
   color: var(--white);
   padding: 100px 0 80px;
   position: relative;
@@ -399,7 +397,7 @@ footer {
 
 /* ---- PAGE HERO (inner pages) ---- */
 .page-hero {
-  background: linear-gradient(135deg, var(--primary) 0%, #162d5a 100%);
+  background: linear-gradient(135deg, rgba(10,31,68,0.78) 0%, rgba(22,45,90,0.75) 100%);
   color: var(--white);
   padding: 70px 0 60px;
   text-align: center;
