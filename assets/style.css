@@ -33,7 +33,7 @@ body {
 .bg-slideshow {
   position: fixed;
   inset: 0;
-  z-index: -2;
+  z-index: 0;
   overflow: hidden;
 }
 .bg-slide {
@@ -55,39 +55,48 @@ body {
   30%  { opacity: 0;   transform: scale(1.12); }
   100% { opacity: 0;   transform: scale(1.00); }
 }
-/* Dark tinted overlay — keeps text readable */
+/* Dark tinted overlay */
 .bg-overlay {
   position: fixed;
   inset: 0;
-  z-index: -1;
+  z-index: 1;
   background: linear-gradient(
     180deg,
-    rgba(5,10,30,0.72) 0%,
-    rgba(5,10,30,0.55) 40%,
-    rgba(5,10,30,0.70) 100%
+    rgba(5,10,30,0.70) 0%,
+    rgba(5,10,30,0.52) 40%,
+    rgba(5,10,30,0.68) 100%
   );
   pointer-events: none;
 }
 
-/* Make solid section backgrounds semi-transparent so Shiva shows through */
-.section          { background: rgba(255,255,255,0.88); }
-.section-light    { background: rgba(244,247,251,0.88); }
-.section-dark     { background: rgba(10,31,68,0.90);   }
+/* All page content sits above the overlay */
+header,
+.hero, .page-hero, .features-strip,
+.section, .section-light, .section-dark,
+.product-section, .cta-banner, footer {
+  position: relative;
+  z-index: 2;
+}
 
-/* Hero sections — let Shiva breathe through the gradient */
+/* Semi-transparent section backgrounds so Shiva shows through */
+.section          { background: rgba(255,255,255,0.86); }
+.section-light    { background: rgba(244,247,251,0.86); }
+.section-dark     { background: rgba(10,31,68,0.88);   }
+
+/* Hero sections — Shiva most visible here */
 .hero {
   background: linear-gradient(
     135deg,
-    rgba(10,31,68,0.82)  0%,
-    rgba(22,45,90,0.78)  60%,
-    rgba(26,108,240,0.72) 100%
+    rgba(10,31,68,0.80)   0%,
+    rgba(22,45,90,0.75)   60%,
+    rgba(26,108,240,0.68) 100%
   );
 }
 .page-hero {
-  background: linear-gradient(135deg, rgba(10,31,68,0.82) 0%, rgba(22,45,90,0.80) 100%);
+  background: linear-gradient(135deg, rgba(10,31,68,0.80) 0%, rgba(22,45,90,0.78) 100%);
 }
-/* Footer stays solid dark */
-footer { background: rgba(13,13,13,0.96); }
+.features-strip { background: rgba(26,108,240,0.88); }
+footer          { background: rgba(13,13,13,0.95); }
 
 a { text-decoration: none; color: inherit; }
 img { max-width: 100%; display: block; }
