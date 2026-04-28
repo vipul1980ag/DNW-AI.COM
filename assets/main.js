@@ -1,3 +1,8 @@
+// ── Logo flip animation ────────────────────────
+document.querySelectorAll('.logo-flipper').forEach(flipper => {
+  setInterval(() => flipper.classList.toggle('flipped'), 2500);
+});
+
 // ── Mobile nav toggle ──────────────────────────
 const hamburger = document.getElementById('hamburger');
 const navMenu   = document.getElementById('nav-menu');

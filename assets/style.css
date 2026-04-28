@@ -141,12 +141,40 @@ header {
 .logo span { color: var(--accent); }
 .logo-icon {
   width: 38px; height: 38px;
-  background: var(--secondary);
+  border-radius: 8px;
+  perspective: 400px;
+  flex-shrink: 0;
+}
+.logo-flipper {
+  width: 100%; height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 8px;
+  animation: logoColorCycle 6s infinite linear;
+}
+.logo-flipper.flipped { transform: rotateY(180deg); }
+.logo-face {
+  position: absolute;
+  inset: 0;
   border-radius: 8px;
   display: flex; align-items: center; justify-content: center;
-  font-size: 1.1rem;
+  backface-visibility: hidden;
+  color: #fff;
   font-weight: 800;
-  color: var(--white);
+  line-height: 1.2;
+  text-align: center;
+}
+.logo-face-front { font-size: 0.9rem; }
+.logo-face-back  { font-size: 6px; letter-spacing: 0.04em; transform: rotateY(180deg); }
+@keyframes logoColorCycle {
+  0%   { background: #1a6cf0; }
+  16%  { background: #7c3aed; }
+  32%  { background: #059669; }
+  48%  { background: #f59e0b; }
+  64%  { background: #ef4444; }
+  80%  { background: #ec4899; }
+  100% { background: #1a6cf0; }
 }
 nav ul {
   display: flex;
